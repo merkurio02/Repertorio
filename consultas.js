@@ -28,7 +28,6 @@ const pool = new Pool({
             return null;
         }
     }
-
     const eliminar = async (id) => {
         try{
             const result= await pool.query('DELETE FROM repertorio WHERE id=$1  RETURNING *',
